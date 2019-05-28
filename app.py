@@ -168,5 +168,9 @@ def installed():
 	
 	return render_template("install.html",install=installed)
 
+@app.route('/ver', methods=['GET','POST'])
+def ver():
+	return "1.0.1"
+
 if __name__ == "__main__":
 	app.run()
