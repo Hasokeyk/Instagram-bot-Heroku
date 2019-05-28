@@ -142,16 +142,16 @@ def installed():
 			
 			#r = requests.get('https://api.hayatikodla.net/instabot/')
 			#if r.status_code == 200:
-			r = r.json()
-			if r['status'] == 'success':
+			#r = r.json()
+			#if r['status'] == 'success':
 			
-				configFile = open('./config.hsn','w')
-				configFile.write('{"username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
-			
-				itext = 'License Validate'
-			else:
-				itext = 'License not approved'
-				istatus = 'danger'
+			configFile = open('./config.hsn','w')
+			configFile.write('{"username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
+		
+			itext = 'License Validate'
+			#else:
+				#itext = 'License not approved'
+				#istatus = 'danger'
 			#else:
 				#itext = 'License not approved'
 				#istatus = 'danger'
