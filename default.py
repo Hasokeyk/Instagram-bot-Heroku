@@ -1,14 +1,5 @@
 # -*- coding: utf-8 -*-
-
-import os
-import time
-import json
-
-from src import InstaBot
-from src.check_status import check_status
-from src.feed_scanner import feed_scanner
-from src.follow_protocol import follow_protocol
-from src.unfollow_protocol import unfollow_protocol
+from instabot_py import InstaBot
 
 if os.path.isfile('./config.hsn'):
 	
