@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+import os
+import json
 from instabot_py import InstaBot
 
 if os.path.isfile('./config.hsn'):
