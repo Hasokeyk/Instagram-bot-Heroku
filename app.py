@@ -140,21 +140,21 @@ def installed():
 			antihashtag = request.form['antihashtag']
 			license = request.form['license']
 			
-			r = requests.get('https://api.hayatikodla.net/instabot/')
-			if r.status_code == 200:
-				r = r.json()
-				if r['status'] == 'success':
-				
-					configFile = open('./config.hsn','w')
-					configFile.write('{"username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
-				
-					itext = 'License Validate'
-				else:
-					itext = 'License not approved'
-					istatus = 'danger'
+			#r = requests.get('https://api.hayatikodla.net/instabot/')
+			#if r.status_code == 200:
+			r = r.json()
+			if r['status'] == 'success':
+			
+				configFile = open('./config.hsn','w')
+				configFile.write('{"username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
+			
+				itext = 'License Validate'
 			else:
 				itext = 'License not approved'
 				istatus = 'danger'
+			#else:
+				#itext = 'License not approved'
+				#istatus = 'danger'
 		except EOFError:
 			itext = 'Empty Values'
 			istatus = 'danger'
