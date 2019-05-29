@@ -170,7 +170,7 @@ def installed():
 
 @app.route('/ver', methods=['GET','POST'])
 def ver():
-	return "1.0.6"
+	return "1.0.8"
 
 if __name__ == "__main__":
 	app.run()
