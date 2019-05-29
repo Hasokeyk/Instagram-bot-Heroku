@@ -15,6 +15,7 @@ if os.path.isfile('./config.hsn'):
 		login=configFile['username'],
 		password=configFile['password'],
 		database_name="database",
+		session_file="session.session",
 		like_per_day=1000,
 		tag_list=configFile['hashtag'].split(','),
 		tag_blacklist=configFile['antihashtag'].split(','),
