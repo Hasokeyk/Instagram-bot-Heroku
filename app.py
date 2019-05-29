@@ -150,7 +150,7 @@ def installed():
 			#if r['status'] == 'success':
 			
 			configFile = open('./config.hsn','w')
-			configFile.write('{"install" : "true", username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
+			configFile.write('{ "install" : "true","username":"'+username+'","password":"'+password+'","hashtag":"'+hashtag+'","antihashtag":"'+antihashtag+'"}')
 		
 			itext = 'License Validate'
 			#else:
@@ -174,7 +174,7 @@ def installed():
 
 @app.route('/ver', methods=['GET','POST'])
 def ver():
-	return "1.0.13"
+	return "1.0.14"
 
 if __name__ == "__main__":
 	app.run()
