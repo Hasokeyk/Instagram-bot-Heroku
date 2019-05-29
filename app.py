@@ -7,6 +7,7 @@ import urllib
 import requests
 import re
 import os
+import json
 import signal
 import subprocess
 import platform
@@ -29,7 +30,10 @@ app.config['DEBUG'] = False
 @app.route('/', methods=['GET','POST'])
 def index():
 	
-	if not os.path.isfile('./config.hsn'):
+	configFile = open('./config.hsn','r')
+	configFile = json.loads(configFile.read())
+
+	if configFile['install'] == "false":
 		welcome = {
 			'text' : 'Please.. install',
 			'status' : 'notinstall'
@@ -170,7 +174,7 @@ def installed():
 
 @app.route('/ver', methods=['GET','POST'])
 def ver():
-	return "1.0.8"
+	return "1.0.9"
 
 if __name__ == "__main__":
 	app.run()
