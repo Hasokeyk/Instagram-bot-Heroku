@@ -12,14 +12,13 @@ if os.path.isfile('./config.hsn'):
 	configFile = json.loads(configFile.read())
 	
 	bot = InstaBot(
-		login=configFile['username'],
-		password=configFile['password'],
-		database_name="database",
-		session_file="session.session",
-		like_per_day=1000,
-		tag_list=configFile['hashtag'].split(','),
-		tag_blacklist=configFile['antihashtag'].split(','),
-		log_mod=1
+		login = configFile['username'],
+		password = configFile['password'],
+		database_name = "database",
+		like_per_day = 1000,
+		tag_list = configFile['hashtag'].split(','),
+		tag_blacklist = configFile['antihashtag'].split(','),
+		log_mod = 1
 	)
 
 	#while True:
